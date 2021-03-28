@@ -72,5 +72,31 @@ switch (num) {
         break;
 }
 
+// Циклы
 
+let number = 50;
 
+while (number <= 55) {
+    console.log(number);
+    number++;
+}
+
+do {
+    console.log(number);
+    number++;
+}
+while (number <= 55);
+
+for (let i = 0; i <= 10; ++i) {
+    if (i === 6) {
+        break;
+    }
+    console.log(i);
+}
+
+for (let i = 0; i <= 10; ++i) {
+    if (i === 6) {
+        continue;
+    }
+    console.log(i);
+}
