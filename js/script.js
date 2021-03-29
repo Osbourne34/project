@@ -138,24 +138,26 @@ let personalMovieDB = {
 // personalMovieDB.movies[c] = d;
 
 for (let i = 0; i < 1; i++) {
-    let a = prompt('Один из последних просмотренных фильмов', '');
-
-    if (a == '') {
-        for (let j = ''; a != '';) {
-            a = prompt('Jeneya');
+    let a = prompt('Один из последних просмотренных фильмов?', '');
+    while (a == null || a == '' || a.length > 50) {
+        a = prompt('Ответьте заного', '');
+        if (a != '' && a != null && a.length < 50) {
+            console.log('da');
+            break;
         }
-    } else if (a == null) {
-        a = prompt('Вы нажали отмену, ответьте.', '');
-    } else if (a.length > 50) {
-        a = prompt('Введите название по короче.', '');
-    } 
-
+    }
 
     let b = prompt('На сколько оцените его?', '');
-    if (b != null && b != '' && b.length < 50) {
-        console.log('doneb');
+    while (b == null || b == '' || b.length > 50) {
+        b = prompt('Ответьте заного', '');
+        if (b != '' && b != null && b.length < 50) {
+            console.log('da');
+            break;
+        }
     }
+
     personalMovieDB.movies[a] = b;
+
 }
 
 console.log(personalMovieDB);
