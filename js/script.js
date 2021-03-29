@@ -142,7 +142,6 @@ for (let i = 0; i < 1; i++) {
     while (a == null || a == '' || a.length > 50) {
         a = prompt('Ответьте заного', '');
         if (a != '' && a != null && a.length < 50) {
-            console.log('da');
             break;
         }
     }
@@ -158,6 +157,15 @@ for (let i = 0; i < 1; i++) {
 
     personalMovieDB.movies[a] = b;
 
+    if (personalMovieDB.count < 10) {
+        console.log("Просмотрено довольно мало фильмов.");
+    } else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
+        console.log("Вы классический зритель.");
+    } else if (personalMovieDB.count >= 30) {
+        console.log("Вы киноман.");
+    } else {
+        console.log('Произошла ошибка.');
+    }
 }
 
 console.log(personalMovieDB);
