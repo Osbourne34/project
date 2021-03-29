@@ -107,12 +107,10 @@
 1) Автоматизировать вопросы пользователю про фильмы при помощи цикла
 
 2) Сделать так, чтобы пользователь не мог оставить ответ в виде пустой строки,
-отменить ответ или ввести название фильма длинее, чем 50 символов. Если это происходит - 
-возвращаем пользователя к вопросам опять. (К любой строке можно обратиться как str.length - и получить её длину)
+отменить ответ или ввести название фильма длинее, чем 50 символов. Если это происходит - возвращаем пользователя к вопросам опять. (К любой строке можно обратиться как str.length - и получить её длину)
 
 3) При помощи условий проверить  personalMovieDB.count, и если он меньше 10 - вывести сообщение
-"Просмотрено довольно мало фильмов", если от 10 до 30 - "Вы классический зритель", а если больше - 
-"Вы киноман". А если не подошло ни к одному варианту - "Произошла ошибка"
+"Просмотрено довольно мало фильмов", если от 10 до 30 - "Вы классический зритель", а если больше - "Вы киноман". А если не подошло ни к одному варианту - "Произошла ошибка".
 
 4) Потренироваться и переписать цикл еще двумя способами*/
 
@@ -150,7 +148,6 @@ for (let i = 0; i < 1; i++) {
     while (b == null || b == '' || b.length > 50) {
         b = prompt('Ответьте заного', '');
         if (b != '' && b != null && b.length < 50) {
-            console.log('da');
             break;
         }
     }
@@ -170,5 +167,76 @@ for (let i = 0; i < 1; i++) {
 
 console.log(personalMovieDB);
 
+// Функций
 
+function showFirstMessage() {
+    console.log("Hello World!");
+}
 
+showFirstMessage();
+//
+let num = 20;
+
+function showTwoMessage(text) {
+    console.log(text);
+    let num = 10;
+    console.log(num);
+}
+
+showTwoMessage("Hello World!");
+console.log(num);
+//
+console.log(calc(5, 6));
+console.log(calc(7, 8));
+console.log(calc(10, 6));
+
+function calc(a, b) {
+    return a + b;
+}
+//
+function ret() {
+    let num = 50;
+    return num;
+}
+
+let anotherNum = ret();
+console.log(anotherNum);
+//
+let logger = function() {
+    console.log('Hello');
+};
+
+logger();
+//
+let calculator = (a, b) => {
+     return a + b;
+};
+// Методы строк и чисел
+
+let str = "test";
+
+console.log(str.toLocaleUpperCase());
+console.log(str.toLocaleLowerCase());
+console.log(str);
+
+let fruit = "Some fruit";
+
+console.log(fruit.indexOf("fruit"));
+
+let logg = "Hello World";
+
+console.log(logg.slice(3, 9));
+
+console.log(logg.substring(3, 9));
+
+console.log(logg.substr(3, 5));
+
+let number = 12.2;
+
+console.log(Math.round(number));
+
+let test = "12.2px";
+
+console.log(parseInt(test));
+console.log(parseFloat(test));
+//
